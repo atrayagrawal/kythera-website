@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "quote": "Kythera has become my anchor. Every Thursday, I know I'll find a space to just... be. The music, the people, the energy - it's unlike anything else in Jaipur.",
+    "name": "Priya Sharma",
+    "context": "Attending since 2019",
+    "status": "show"
+  },
+  {
+    "id": "2",
+    "quote": "I came for the music but stayed for the community. These people are now my family.",
+    "name": "Rah Verma",
+    "context": "First-timer, now regular",
+    "status": "show"
+  },
+  {
+    "id": "3",
+    "quote": "As someone who'd never played music before, I was terrified. But Kythera showed me that everyone has music inside them. You just need a safe space to let it out.",
+    "name": "Anita Gupta",
+    "context": "Started 2022",
+    "status": "show"
+  }
+]
