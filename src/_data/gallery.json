@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "url": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800",
+    "caption": "Thursday Jam - October 2024",
+    "category": "Jam",
+    "featured": "yes",
+    "status": "show"
+  },
+  {
+    "id": "2",
+    "url": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800",
+    "caption": "Bhakti Jam",
+    "category": "Bhakti",
+    "featured": "yes",
+    "status": "show"
+  },
+  {
+    "id": "3",
+    "url": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800",
+    "caption": "Kids Backyard Jam",
+    "category": "Kids",
+    "featured": "no",
+    "status": "show"
+  },
+  {
+    "id": "4",
+    "url": "https://images.unsplash.com/photo-1516280440614-6697288d5d38?w=800",
+    "caption": "Corporate Session",
+    "category": "Corporate",
+    "featured": "no",
+    "status": "show"
+  },
+  {
+    "id": "5",
+    "url": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800",
+    "caption": "Circle Formation",
+    "category": "Jam",
+    "featured": "yes",
+    "status": "show"
+  },
+  {
+    "id": "6",
+    "url": "https://images.unsplash.com/photo-1499364615650-ec11cafd1d9e?w=800",
+    "caption": "Behind the Scenes",
+    "category": "Behind Scenes",
+    "featured": "no",
+    "status": "show"
+  }
+]
