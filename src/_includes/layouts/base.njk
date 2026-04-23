@@ -28,7 +28,7 @@
   {% include "components/header.njk" %}
 
   <main class="flex-grow">
-    {{ content }}
+    {{ content | safe }}
   </main>
 
   {% include "components/footer.njk" %}
