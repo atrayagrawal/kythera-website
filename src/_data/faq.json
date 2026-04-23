@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "category": "General",
+    "question": "Do I need to know how to play music?",
+    "answer": "Not at all! Kythera is designed for everyone, regardless of musical experience. Many of our regular members had never played an instrument before joining. We provide all instruments and guide you through the process.",
+    "order": "1"
+  },
+  {
+    "id": "2",
+    "category": "General",
+    "question": "What should I bring?",
+    "answer": "Just yourself and an open mind. We provide all instruments, though you're welcome to bring your own if you have one. Wear comfortable clothes and bring a water bottle.",
+    "order": "2"
+  },
+  {
+    "id": "3",
+    "category": "Jam",
+    "question": "Can I just come and watch?",
+    "answer": "Kythera is a participatory practice, not a performance. We ask that everyone who attends participates in the music-making. If you're unsure, come once and try it - you'll be supported!",
+    "order": "1"
+  },
+  {
+    "id": "4",
+    "category": "Corporate",
+    "question": "How long are corporate sessions?",
+    "answer": "Most corporate sessions are 2-3 hours, but we can customize based on your needs. We recommend at least 2 hours for the full experience.",
+    "order": "1"
+  }
+]
