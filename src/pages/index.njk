@@ -1,0 +1,176 @@
+---
+layout: layouts/base.njk
+title: Home
+---
+
+{% include "components/hero-home.njk" %}
+
+<!-- Origin Story Section -->
+<section id="origin-story" class="py-20 md:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="section-eyebrow">The Origin Story</p>
+        <h2 class="section-headline mb-6">We Started Because<br>We Were Lonely.</h2>
+        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+          In July 2016, a small group of friends gathered in Jaipur with a simple idea: what if we could create a space where music wasn't about performance, but about connection?
+        </p>
+        <p class="text-gray-600 text-lg leading-relaxed mb-8">
+          No stage. No audience. No professionals. Just people, instruments, and the courage to be heard. From that first gathering, something unexpected happened - we found our community.
+        </p>
+        <a href="/about/" class="text-violet-primary font-medium hover:text-violet-dark inline-flex items-center group">
+          Read Our Full Story
+          <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+      <div class="relative">
+        <div class="aspect-video bg-gray-100 rounded-2xl overflow-hidden">
+          <!-- Placeholder for origin story image/video -->
+          <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-violet-light/20 to-violet-primary/20">
+            <div class="text-center p-8">
+              <div class="w-16 h-16 bg-violet-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <p class="text-gray-600 font-medium">Watch our story</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section (Violet) -->
+<section class="py-20 md:py-28 bg-violet-primary">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <p class="text-white/80 text-xs font-medium uppercase tracking-label mb-4">The Experience</p>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight">What Happens in the Circle</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Pillar 1 -->
+      <div class="text-center">
+        <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <span class="text-4xl">🎵</span>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-3">We Make Sound Together</h3>
+        <p class="text-white/80 leading-relaxed">No audience, no performers. Everyone contributes to the sound. Your voice matters here.</p>
+      </div>
+
+      <!-- Pillar 2 -->
+      <div class="text-center">
+        <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <span class="text-4xl">👁️</span>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-3">We See Each Other</h3>
+        <p class="text-white/80 leading-relaxed">Intentional eye contact, genuine presence. In the circle, you're truly seen and heard.</p>
+      </div>
+
+      <!-- Pillar 3 -->
+      <div class="text-center">
+        <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <span class="text-4xl">🤝</span>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-3">We Leave as Friends</h3>
+        <p class="text-white/80 leading-relaxed">Real bonds form in the circle. Many of us have found our closest friends here.</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="/offerings/jam/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-violet-primary font-medium rounded-full hover:bg-gray-100 transition-colors">
+        See This Thursday's Jam
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Offerings Section -->
+<section class="py-20 md:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <p class="section-eyebrow">Our Offerings</p>
+      <h2 class="section-headline">Ways to Practice With Us</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for offering in offerings %}
+        {% if offering.status != 'inactive' %}
+          <a href="/offerings/{{ offering.id }}/" class="group block p-8 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors {% if offering.status == 'coming_soon' %}border-2 border-dashed border-gray-300{% endif %}">
+            <div class="w-14 h-14 bg-violet-primary rounded-full flex items-center justify-center mb-6 text-2xl">
+              {{ offering.icon }}
+            </div>
+            <h3 class="text-xl font-semibold text-black mb-2 group-hover:text-violet-primary transition-colors">
+              {{ offering.name }}
+              {% if offering.status == 'coming_soon' %}
+                <span class="ml-2 text-xs font-medium text-gray-400 uppercase tracking-label">Coming Soon</span>
+              {% endif %}
+            </h3>
+            <p class="text-gray-600 mb-4 leading-relaxed">{{ offering.tagline }}</p>
+            {% if offering.status == 'active' %}
+              <div class="flex items-center text-violet-primary font-medium text-sm">
+                Learn More
+                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </div>
+            {% endif %}
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-20 md:py-28 bg-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <p class="section-eyebrow">Community Voices</p>
+      <h2 class="section-headline">What People Say</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {% for testimonial in testimonials %}
+        {% if testimonial.status == 'show' %}
+          <div class="bg-white p-8 rounded-2xl">
+            <svg class="w-8 h-8 text-violet-light mb-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+            <p class="text-gray-700 text-lg leading-relaxed mb-6">{{ testimonial.quote }}</p>
+            <div>
+              <p class="font-semibold text-black">{{ testimonial.name }}</p>
+              <p class="text-gray-500 text-sm">{{ testimonial.context }}</p>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Join CTA Section -->
+<section class="py-20 md:py-28 bg-black">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">Join the Circle</h2>
+    <p class="text-lg text-white/70 mb-8 max-w-xl mx-auto">
+      Every Thursday, we gather to practice music as meditation. No experience needed. Just bring yourself.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+      <a href="/offerings/jam/" class="btn-primary text-base px-8 py-4">
+        Register for Thursday
+      </a>
+    </div>
+    <div class="flex flex-wrap items-center justify-center gap-6 text-white/50 text-sm">
+      <a href="https://wa.me/919999999999" target="_blank" rel="noopener" class="hover:text-white transition-colors">WhatsApp</a>
+      <span>•</span>
+      <a href="mailto:hello@kythera.city" class="hover:text-white transition-colors">Email</a>
+      <span>•</span>
+      <span>Jaipur, India</span>
+    </div>
+  </div>
+</section>
