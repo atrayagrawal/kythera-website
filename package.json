@@ -1,0 +1,20 @@
+{
+  "name": "kythera-website",
+  "version": "1.0.0",
+  "description": "Kythera Music Wellness Community Website",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "debug": "DEBUG=* eleventy",
+    "fetch-sheets": "node scripts/fetch-sheets.js"
+  },
+  "keywords": ["kythera", "music", "wellness", "community"],
+  "author": "Kythera",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "googleapis": "^128.0.0",
+    "dotenv": "^16.3.1"
+  }
+}

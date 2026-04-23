@@ -1,32 +1,7 @@
-# Worktrees
-.worktrees/
-worktrees/
-
-# Dependencies
 node_modules/
-
-# Build output
 _site/
-dist/
-build/
-
-# Environment
 .env
-.env.local
-
-# Google credentials
 service-account.json
-
-# Cache
 .cache/
 *.log
-
-# OS files
 .DS_Store
-Thumbs.db
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
