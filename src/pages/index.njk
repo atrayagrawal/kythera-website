@@ -4,7 +4,37 @@ title: Home
 permalink: /
 ---
 
-{% include "components/hero-home.njk" %}
+<section class="bg-black min-h-[80vh] flex items-center py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div class="max-w-3xl">
+      <p class="text-violet-light text-xs font-medium uppercase tracking-label mb-6">
+        Since 2016 • Jaipur, India
+      </p>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 tracking-tight">
+        This Is Not a Concert.<br>This Is a Practice.
+      </h1>
+      <p class="text-lg md:text-xl text-white/70 mb-8 max-w-xl leading-relaxed">
+        Kythera is where music becomes meditation. A weekly gathering where we make sound together, see each other, and leave as friends.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 mb-8">
+        <a href="/offerings/jam/" class="btn-primary text-base px-8 py-4">Join Thursday Jam</a>
+        <a href="#origin-story" class="btn-secondary text-base px-8 py-4">Watch Video</a>
+      </div>
+      <div class="flex items-center gap-6 text-white/50 text-sm">
+        <span class="flex items-center">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+          </svg>
+          35-40 people
+        </span>
+        <span>•</span>
+        <span>Thursdays</span>
+        <span>•</span>
+        <span>7:30-9:30 PM</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Origin Story Section -->
 <section id="origin-story" class="py-20 md:py-28 bg-white">
@@ -19,7 +49,7 @@ permalink: /
         <p class="text-gray-600 text-lg leading-relaxed mb-8">
           No stage. No audience. No professionals. Just people, instruments, and the courage to be heard. From that first gathering, something unexpected happened - we found our community.
         </p>
-        <a href="{{ '/about/' | url }}" class="text-violet-primary font-medium hover:text-violet-dark inline-flex items-center group">
+        <a href="/about/" class="text-violet-primary font-medium hover:text-violet-dark inline-flex items-center group">
           Read Our Full Story
           <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -83,7 +113,7 @@ permalink: /
     </div>
 
     <div class="text-center mt-12">
-      <a href="{{ '/offerings/jam/' | url }}" class="inline-flex items-center justify-center px-8 py-4 bg-white text-violet-primary font-medium rounded-full hover:bg-gray-100 transition-colors">
+      <a href="/offerings/jam/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-violet-primary font-medium rounded-full hover:bg-gray-100 transition-colors">
         See This Thursday's Jam
       </a>
     </div>
@@ -101,7 +131,7 @@ permalink: /
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       {% for offering in offerings %}
         {% if offering.status != 'inactive' %}
-          <a href="{{ '/offerings/' + offering.id + '/' | url }}" class="group block p-8 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors {% if offering.status == 'coming_soon' %}border-2 border-dashed border-gray-300{% endif %}">
+          <a href="/offerings/{{ offering.id }}/" class="group block p-8 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors {% if offering.status == 'coming_soon' %}border-2 border-dashed border-gray-300{% endif %}">
             <div class="w-14 h-14 bg-violet-primary rounded-full flex items-center justify-center mb-6 text-2xl">
               {{ offering.icon }}
             </div>
@@ -162,7 +192,7 @@ permalink: /
       Every Thursday, we gather to practice music as meditation. No experience needed. Just bring yourself.
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-      <a href="{{ '/offerings/jam/' | url }}" class="btn-primary text-base px-8 py-4">
+      <a href="/offerings/jam/" class="btn-primary text-base px-8 py-4">
         Register for Thursday
       </a>
     </div>
