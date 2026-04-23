@@ -41,6 +41,7 @@ jobs:
       - name: Fetch Google Sheets data
         env:
           GOOGLE_SERVICE_ACCOUNT: ${{ secrets.GOOGLE_SERVICE_ACCOUNT }}
+          GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
         run: |
           if [ -n "$GOOGLE_SERVICE_ACCOUNT" ]; then
             echo "$GOOGLE_SERVICE_ACCOUNT" > service-account.json
