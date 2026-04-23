@@ -1,0 +1,22 @@
+{
+  "main": [
+    {
+      "title": "Offerings",
+      "url": "/offerings/",
+      "children": [
+        { "title": "Kythera Jam", "url": "/offerings/jam/" },
+        { "title": "Bhakti Jam", "url": "/offerings/bhakti/" },
+        { "title": "Corporate Programs", "url": "/offerings/corporate/" },
+        { "title": "InnerCircle", "url": "/offerings/innercircle/" },
+        { "title": "Kids Programs", "url": "/offerings/kids/" }
+      ]
+    },
+    { "title": "Our Story", "url": "/about/" },
+    { "title": "Community", "url": "/community/" },
+    { "title": "Gallery", "url": "/gallery/" }
+  ],
+  "cta": {
+    "title": "Join Thursday",
+    "url": "/offerings/jam/"
+  }
+}
