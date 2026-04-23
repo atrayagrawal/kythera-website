@@ -1,0 +1,33 @@
+<section class="py-16 md:py-20 bg-white border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl">
+      <p class="section-eyebrow">Schedule</p>
+      <h2 class="text-2xl md:text-3xl font-bold text-black mb-6">When We Meet</h2>
+      <div class="bg-gray-50 rounded-xl p-6">
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-violet-primary rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="font-semibold text-black text-lg">{{ offering.schedule }}</p>
+            <p class="text-gray-600 mt-1">{{ offering.location }}</p>
+            {% if jam_schedule.length > 0 %}
+              <div class="mt-4 space-y-2">
+                {% for jam in jam_schedule.slice(0, 4) %}
+                  {% if jam.status == 'open' %}
+                    <div class="flex items-center justify-between bg-white rounded-lg p-3">
+                      <span class="text-gray-700">{{ jam.date }}</span>
+                      <a href="{{ jam.registration_url }}" target="_blank" rel="noopener" class="text-violet-primary font-medium hover:text-violet-dark text-sm">Register →</a>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

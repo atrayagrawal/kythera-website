@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+---
+
+{% include "components/offering-hero.njk" %}
+
+{% if offering.section_what_to_expect == 'on' %}
+  {% include "components/section-what-to-expect.njk" %}
+{% endif %}
+
+{% if offering.section_who_for == 'on' %}
+  {% include "components/section-who-for.njk" %}
+{% endif %}
+
+{% if offering.section_schedule == 'on' %}
+  {% include "components/section-schedule.njk" %}
+{% endif %}
+
+{% if offering.section_pricing == 'on' %}
+  {% include "components/section-pricing.njk" %}
+{% endif %}
+
+{% include "components/section-cta.njk" %}
