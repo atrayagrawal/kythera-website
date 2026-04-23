@@ -1,11 +1,7 @@
 ---
 layout: layouts/offering.njk
 title: Kythera Jam
-pagination:
-  data: offerings
-  size: 1
-  alias: offering
-  filter:
-    - jam
 permalink: "offerings/jam/"
+eleventyComputed:
+  offering: "{{ offerings | findOffering('jam') | first }}"
 ---

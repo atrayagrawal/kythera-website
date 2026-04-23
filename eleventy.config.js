@@ -6,6 +6,7 @@ module.exports = function(eleventyConfig) {
 
   // Passthrough copy for static assets
   eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   // Watch Tailwind
   eleventyConfig.addWatchTarget("./src/assets/css/");
@@ -15,6 +16,11 @@ module.exports = function(eleventyConfig) {
 
   // Filter: JSON stringify for debugging
   eleventyConfig.addFilter("json", (value) => JSON.stringify(value, null, 2));
+
+  // Filter: Find offering by ID
+  eleventyConfig.addFilter("findOffering", (offerings, id) => {
+    return offerings.filter(offering => offering.id === id);
+  });
 
   return {
     dir: {

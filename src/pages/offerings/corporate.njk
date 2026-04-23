@@ -1,11 +1,7 @@
 ---
 layout: layouts/offering.njk
 title: Corporate Programs
-pagination:
-  data: offerings
-  size: 1
-  alias: offering
-  filter:
-    - corporate
 permalink: "offerings/corporate/"
+eleventyComputed:
+  offering: "{{ offerings | findOffering('corporate') | first }}"
 ---

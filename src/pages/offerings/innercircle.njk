@@ -1,11 +1,7 @@
 ---
 layout: layouts/offering.njk
 title: Kythera InnerCircle
-pagination:
-  data: offerings
-  size: 1
-  alias: offering
-  filter:
-    - innercircle
 permalink: "offerings/innercircle/"
+eleventyComputed:
+  offering: "{{ offerings | findOffering('innercircle') | first }}"
 ---
