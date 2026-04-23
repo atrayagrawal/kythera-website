@@ -1,0 +1,100 @@
+=== OFFERINGS SHEET ===
+Copy these headers into row 1 of the "offerings" tab:
+
+id,name,tagline,status,icon,description,schedule,location,cta_text,cta_link,price,section_what_to_expect,section_who_for,section_schedule,section_pricing,section_gallery,section_faq
+
+Copy these 6 data rows:
+
+jam,Thursday Jam,A weekly gathering where we make sound together,active,🎵,"Every Thursday, we gather in a circle to create sound together. No experience needed, no wrong notes. Just presence, intention, and the courage to be heard.",Thursdays 7:30-9:30 PM,Jaipur,Register for This Week,https://lu.ma/kythera-jam,₹500,on,on,on,on,on,on
+
+bhakti,Bhakti Sessions,Devotional singing for the modern seeker,active,🙏,"Ancient chants in a modern context. We sing mantras, bhajans, and devotional songs from various traditions. It's not about religion—it's about surrender through sound.",Monthly Sunday mornings,Jaipur,Join Next Session,https://lu.ma/kythera-bhakti,₹300,on,on,on,off,on,on
+
+corporate,Corporate Wellness,Bring the circle to your workplace,active,🏢,"Team building through music. We bring the Kythera experience to offices, creating spaces for connection outside of meetings and deadlines.",By appointment,Your office,Schedule a Session,mailto:hello@kythera.city,Custom,on,on,off,on,off,on
+
+innercircle,Inner Circle,Deeper practice for committed members,active,⭐,"An intimate group of 12 committed practitioners. Weekly sessions, personal guidance, and a deeper dive into the therapeutic aspects of sound.",Weekly Tuesdays,Private Studio,Apply for Membership,mailto:innercircle@kythera.city,₹2000/mo,on,on,on,on,off,on
+
+kids,Kids Rhythm,Music exploration for ages 5-12,active,🥁,"Children discover the joy of rhythm and sound in a playful, non-competitive environment. No recitals, no grades—just pure musical exploration.",Saturdays 10 AM,Jaipur,Register Your Child,https://tally.so/r/kids-form,₹400,on,on,on,off,on,on
+
+retreats,Retreats,Immersive weekends away,active,🏔️,"Quarterly retreats to locations around Rajasthan. Three days of intensive practice, silence, and community in nature.",Quarterly,Various,Join Waitlist,https://tally.so/r/retreat-waitlist,₹3500,on,on,on,on,on,on
+
+
+=== TESTIMONIALS SHEET ===
+Copy these headers into row 1 of the "testimonials" tab:
+
+id,quote,name,context,status
+
+Copy these 3 data rows:
+
+1,"I came for the music but stayed for the people. Kythera has given me a community I didn't know I was missing.",Priya M.,Thursday Jam regular,show
+
+2,"As someone who was told they 'couldn't sing' as a child, Kythera helped me reclaim my voice. No judgment, just support.",Arjun K.,Member since 2018,show
+
+3,"Our company's Kythera session was the most connected our team has felt in years. Highly recommend for any workplace.",Rahul S.,Corporate client,show
+
+
+=== FAQ SHEET ===
+Copy these headers into row 1 of the "faq" tab:
+
+id,question,answer,category,sort_order
+
+Copy these 5 data rows:
+
+1,Do I need musical experience?,Not at all. Kythera welcomes everyone regardless of background. Many regulars had never sung in a group before.,jam,1
+
+2,What should I bring?,Just yourself. We provide instruments though you're welcome to bring your own. Water and snacks provided.,jam,2
+
+3,Can I visit once to try it out?,Absolutely. Single-session registration available. Many of us started with just one Thursday.,jam,3
+
+4,Is this a religious thing?,Not at all. While we use practices from various traditions Kythera is secular. All faiths and no faith welcome.,bhakti,1
+
+5,What age for Kids Rhythm?,We welcome children ages 5-12. Parents can drop off or stay - whatever makes the child comfortable.,kids,1
+
+
+=== SECTIONS_TOGGLE SHEET ===
+Copy these headers into row 1 of the "sections_toggle" tab:
+
+offering_id,section,status
+
+Copy these 36 data rows:
+
+jam,what_to_expect,on
+jam,who_for,on
+jam,schedule,on
+jam,pricing,on
+jam,gallery,on
+jam,faq,on
+
+bhakti,what_to_expect,on
+bhakti,who_for,on
+bhakti,schedule,on
+bhakti,pricing,off
+bhakti,gallery,on
+bhakti,faq,on
+
+corporate,what_to_expect,on
+corporate,who_for,on
+corporate,schedule,off
+corporate,pricing,on
+corporate,gallery,off
+corporate,faq,on
+
+innercircle,what_to_expect,on
+innercircle,who_for,on
+innercircle,schedule,on
+innercircle,pricing,on
+innercircle,gallery,off
+innercircle,faq,on
+
+kids,what_to_expect,on
+kids,who_for,on
+kids,schedule,on
+kids,pricing,off
+kids,gallery,on
+kids,faq,on
+
+retreats,what_to_expect,on
+retreats,who_for,on
+retreats,schedule,on
+retreats,pricing,on
+retreats,gallery,on
+retreats,faq,on
