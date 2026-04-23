@@ -2,7 +2,7 @@
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
-      <a href="/" class="text-white font-bold text-xl tracking-label uppercase">
+      <a href="{{ '/' | url }}" class="text-white font-bold text-xl tracking-label uppercase">
         Kythera
       </a>
 
@@ -20,7 +20,7 @@
               <div class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left">
                 <div class="py-2">
                   {% for child in item.children %}
-                    <a href="{{ child.url }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-primary hover:text-white transition-colors">
+                    <a href="{{ child.url | url }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-violet-primary hover:text-white transition-colors">
                       {{ child.title }}
                     </a>
                   {% endfor %}
@@ -28,14 +28,14 @@
               </div>
             </div>
           {% else %}
-            <a href="{{ item.url }}" class="text-white/80 hover:text-white text-sm font-medium tracking-nav transition-colors">
+            <a href="{{ item.url | url }}" class="text-white/80 hover:text-white text-sm font-medium tracking-nav transition-colors">
               {{ item.title }}
             </a>
           {% endif %}
         {% endfor %}
 
         <!-- CTA Button -->
-        <a href="{{ navigation.cta.url }}" class="btn-primary text-sm">
+        <a href="{{ navigation.cta.url | url }}" class="btn-primary text-sm">
           {{ navigation.cta.title }}
         </a>
       </div>
@@ -68,21 +68,21 @@
                 <h3 class="text-white/60 text-sm font-medium uppercase tracking-label mb-3">{{ item.title }}</h3>
                 <div class="space-y-2 ml-2">
                   {% for child in item.children %}
-                    <a href="{{ child.url }}" class="block text-white text-lg hover:text-violet-light transition-colors">
+                    <a href="{{ child.url | url }}" class="block text-white text-lg hover:text-violet-light transition-colors">
                       {{ child.title }}
                     </a>
                   {% endfor %}
                 </div>
               </div>
             {% else %}
-              <a href="{{ item.url }}" class="block text-white text-xl font-medium hover:text-violet-light transition-colors">
+              <a href="{{ item.url | url }}" class="block text-white text-xl font-medium hover:text-violet-light transition-colors">
                 {{ item.title }}
               </a>
             {% endif %}
           {% endfor %}
         </div>
         <div class="mt-8 pt-8 border-t border-white/10">
-          <a href="{{ navigation.cta.url }}" class="btn-primary w-full justify-center">
+          <a href="{{ navigation.cta.url | url }}" class="btn-primary w-full justify-center">
             {{ navigation.cta.title }}
           </a>
         </div>
