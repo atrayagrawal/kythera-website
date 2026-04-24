@@ -25,6 +25,14 @@ layout: layouts/base.njk
     {% include "components/section-pricing.njk" %}
   {% endif %}
 
+  {% if offering.section_gallery == 'on' %}
+    {% include "components/section-gallery.njk" %}
+  {% endif %}
+
+  {% if offering.section_faq == 'on' %}
+    {% include "components/section-faq.njk" %}
+  {% endif %}
+
   {% include "components/section-cta.njk" %}
 {% else %}
   <div class="py-20 text-center">

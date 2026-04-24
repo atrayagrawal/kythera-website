@@ -1,0 +1,47 @@
+<section class="py-16 md:py-20 bg-gray-50 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto">
+      <p class="section-eyebrow text-center">FAQ</p>
+      <h2 class="text-2xl md:text-3xl font-bold text-black mb-6 text-center">Common Questions</h2>
+
+      {% set offeringFaq = faq | filterByCategory(offering.category) %}
+      {% set generalFaq = faq | filterByCategory('General') %}
+
+      {% if offeringFaq.length > 0 or generalFaq.length > 0 %}
+        <div class="space-y-4">
+          {# Show offering-specific FAQ first #}
+          {% for item in offeringFaq %}
+            <details class="bg-white rounded-xl overflow-hidden">
+              <summary class="p-6 cursor-pointer font-medium text-black hover:bg-gray-50 transition-colors flex items-center justify-between">
+                {{ item.question }}
+                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </summary>
+              <div class="px-6 pb-6 text-gray-600 leading-relaxed">
+                {{ item.answer }}
+              </div>
+            </details>
+          {% endfor %}
+
+          {# Show general FAQ #}
+          {% for item in generalFaq %}
+            <details class="bg-white rounded-xl overflow-hidden">
+              <summary class="p-6 cursor-pointer font-medium text-black hover:bg-gray-50 transition-colors flex items-center justify-between">
+                {{ item.question }}
+                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </summary>
+              <div class="px-6 pb-6 text-gray-600 leading-relaxed">
+                {{ item.answer }}
+              </div>
+            </details>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="text-gray-600 text-center">No FAQs available yet. Check back soon!</p>
+      {% endif %}
+    </div>
+  </div>
+</section>

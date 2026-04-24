@@ -17,6 +17,7 @@
     "section_pricing": "on",
     "section_gallery": "off",
     "section_faq": "on",
+    "category": "Jam",
     "what_to_expect": [
       "Guided music meditation",
       "Collaborative sound-making",
@@ -47,6 +48,7 @@
     "section_pricing": "on",
     "section_gallery": "on",
     "section_faq": "off",
+    "category": "Bhakti",
     "what_to_expect": [
       "Devotional chanting and kirtan",
       "Guided meditation with sound",
@@ -77,6 +79,7 @@
     "section_pricing": "on",
     "section_gallery": "off",
     "section_faq": "on",
+    "category": "Corporate",
     "what_to_expect": [
       "2-3 hour facilitated session",
       "Team building through music",
@@ -107,6 +110,7 @@
     "section_pricing": "on",
     "section_gallery": "off",
     "section_faq": "on",
+    "category": "InnerCircle",
     "what_to_expect": [
       "Unlimited jam access",
       "Exclusive member events",
@@ -137,6 +141,7 @@
     "section_pricing": "on",
     "section_gallery": "on",
     "section_faq": "on",
+    "category": "Kids",
     "what_to_expect": [
       "Backyard Junk Jam fun",
       "Creative music exploration",
@@ -166,6 +171,7 @@
     "section_schedule": "off",
     "section_pricing": "off",
     "section_gallery": "off",
-    "section_faq": "off"
+    "section_faq": "off",
+    "category": "Retreats"
   }
 ]

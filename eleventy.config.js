@@ -22,6 +22,18 @@ module.exports = function(eleventyConfig) {
     return offerings.find(offering => offering.id === id);
   });
 
+  // Filter: Filter items by category (for FAQ, gallery)
+  eleventyConfig.addFilter("filterByCategory", (items, category) => {
+    if (!items || !category) return [];
+    return items.filter(item => item.category === category);
+  });
+
+  // Filter: Filter items by status
+  eleventyConfig.addFilter("filterByStatus", (items, status) => {
+    if (!items || !status) return [];
+    return items.filter(item => item.status === status);
+  });
+
   return {
     dir: {
       input: "src",

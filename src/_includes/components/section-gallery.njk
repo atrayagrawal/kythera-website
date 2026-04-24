@@ -1,0 +1,48 @@
+<section class="py-16 md:py-20 bg-white border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <p class="section-eyebrow">Gallery</p>
+      <h2 class="text-2xl md:text-3xl font-bold text-black mb-4">{{ offering.name }} Moments</h2>
+      <p class="text-gray-600 max-w-xl mx-auto">
+        Glimpses from our {{ offering.name | lower }} sessions and community gatherings.
+      </p>
+    </div>
+
+    {% set offeringPhotos = gallery | filterByCategory(offering.category) | filterByStatus('show') %}
+
+    {% if offeringPhotos.length > 0 %}
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {% for photo in offeringPhotos.slice(0, 8) %}
+          <div class="aspect-square rounded-xl overflow-hidden bg-gray-100 group">
+            <img
+              src="{{ photo.url }}"
+              alt="{{ photo.caption }}"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            >
+          </div>
+        {% endfor %}
+      </div>
+
+      {% if offeringPhotos.length > 8 %}
+        <div class="text-center mt-8">
+          <a href="/gallery/" class="inline-flex items-center justify-center px-6 py-3 bg-violet-primary text-white font-medium rounded-full hover:bg-violet-dark transition-colors">
+            View All Photos
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+      {% endif %}
+    {% else %}
+      <div class="text-center py-12 bg-gray-50 rounded-2xl">
+        <div class="w-16 h-16 bg-violet-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-violet-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <p class="text-gray-600">Photos coming soon! Check out our full <a href="/gallery/" class="text-violet-primary hover:underline">gallery</a> for now.</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
