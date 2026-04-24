@@ -84,6 +84,7 @@ async function fetchAllData() {
     { name: 'testimonials', range: 'testimonials!A:E' },
     { name: 'faq', range: 'faq!A:E' },
     { name: 'sections_toggle', range: 'sections_toggle!A:C' },
+    { name: 'jam_schedule', range: 'jam_schedule!A:E' },
   ];
 
   let hasErrors = false;

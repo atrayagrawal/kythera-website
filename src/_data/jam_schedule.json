@@ -1,0 +1,30 @@
+[
+  {
+    "date": "Thursday, April 24, 2025",
+    "time": "7:30-9:30 PM",
+    "location": "The Music Room, C-Scheme, Jaipur",
+    "registration_url": "https://lu.ma/kythera",
+    "status": "open"
+  },
+  {
+    "date": "Thursday, May 1, 2025",
+    "time": "7:30-9:30 PM",
+    "location": "The Music Room, C-Scheme, Jaipur",
+    "registration_url": "https://lu.ma/kythera",
+    "status": "open"
+  },
+  {
+    "date": "Thursday, May 8, 2025",
+    "time": "7:30-9:30 PM",
+    "location": "The Music Room, C-Scheme, Jaipur",
+    "registration_url": "https://lu.ma/kythera",
+    "status": "open"
+  },
+  {
+    "date": "Thursday, May 15, 2025",
+    "time": "7:30-9:30 PM",
+    "location": "The Music Room, C-Scheme, Jaipur",
+    "registration_url": "https://lu.ma/kythera",
+    "status": "full"
+  }
+]

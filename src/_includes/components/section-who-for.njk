@@ -7,18 +7,27 @@
         You don't need to be a musician. You don't need any experience. You just need to be open to trying something new.
       </p>
       <div class="grid sm:grid-cols-3 gap-6">
-        <div class="text-center">
-          <div class="w-12 h-12 bg-violet-primary rounded-full flex items-center justify-center mx-auto mb-3 text-white text-xl font-bold">✓</div>
-          <p class="text-gray-700 font-medium">Absolute beginners</p>
-        </div>
-        <div class="text-center">
-          <div class="w-12 h-12 bg-violet-primary rounded-full flex items-center justify-center mx-auto mb-3 text-white text-xl font-bold">✓</div>
-          <p class="text-gray-700 font-medium">Experienced musicians</p>
-        </div>
-        <div class="text-center">
-          <div class="w-12 h-12 bg-violet-primary rounded-full flex items-center justify-center mx-auto mb-3 text-white text-xl font-bold">✓</div>
-          <p class="text-gray-700 font-medium">The curious</p>
-        </div>
+        {% if offering.who_for %}
+          {% for item in offering.who_for %}
+            <div class="text-center">
+              <div class="w-12 h-12 bg-violet-primary rounded-full flex items-center justify-center mx-auto mb-3 text-white text-xl font-bold">✓</div>
+              <p class="text-gray-700 font-medium">{{ item }}</p>
+            </div>
+          {% endfor %}
+        {% else %}
+          <div class="text-center">
+            <div class="w-12 h-12 bg-violet-primary rounded-full flex items-center justify-center mx-auto mb-3 text-white text-xl font-bold">✓</div>
+            <p class="text-gray-700 font-medium">Absolute beginners</p>
+          </div>
+          <div class="text-center">
+            <div class="w-12 h-12 bg-violet-primary rounded-full flex items-center justify-center mx-auto mb-3 text-white text-xl font-bold">✓</div>
+            <p class="text-gray-700 font-medium">Experienced musicians</p>
+          </div>
+          <div class="text-center">
+            <div class="w-12 h-12 bg-violet-primary rounded-full flex items-center justify-center mx-auto mb-3 text-white text-xl font-bold">✓</div>
+            <p class="text-gray-700 font-medium">The curious</p>
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>

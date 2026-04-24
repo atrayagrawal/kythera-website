@@ -2,22 +2,32 @@
 layout: layouts/base.njk
 ---
 
-{% include "components/offering-hero.njk" %}
+{# Find offering based on page fileSlug or derive from URL #}
+{% set offeringId = page.fileSlug %}
+{% set offering = offerings | findOffering(offeringId) %}
 
-{% if offering.section_what_to_expect == 'on' %}
-  {% include "components/section-what-to-expect.njk" %}
+{% if offering %}
+  {% include "components/offering-hero.njk" %}
+
+  {% if offering.section_what_to_expect == 'on' %}
+    {% include "components/section-what-to-expect.njk" %}
+  {% endif %}
+
+  {% if offering.section_who_for == 'on' %}
+    {% include "components/section-who-for.njk" %}
+  {% endif %}
+
+  {% if offering.section_schedule == 'on' %}
+    {% include "components/section-schedule.njk" %}
+  {% endif %}
+
+  {% if offering.section_pricing == 'on' %}
+    {% include "components/section-pricing.njk" %}
+  {% endif %}
+
+  {% include "components/section-cta.njk" %}
+{% else %}
+  <div class="py-20 text-center">
+    <p class="text-red-600">Error: Could not find offering data for {{ offeringId }}</p>
+  </div>
 {% endif %}
-
-{% if offering.section_who_for == 'on' %}
-  {% include "components/section-who-for.njk" %}
-{% endif %}
-
-{% if offering.section_schedule == 'on' %}
-  {% include "components/section-schedule.njk" %}
-{% endif %}
-
-{% if offering.section_pricing == 'on' %}
-  {% include "components/section-pricing.njk" %}
-{% endif %}
-
-{% include "components/section-cta.njk" %}

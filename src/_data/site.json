@@ -1,0 +1,21 @@
+{
+  "name": "Kythera",
+  "tagline": "A music wellness community in Jaipur, India",
+  "founded": 2016,
+  "location": {
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "country": "India"
+  },
+  "contact": {
+    "email": "hello@kythera.city",
+    "whatsapp": "918742017911",
+    "whatsapp_display": "+91 87420 17911"
+  },
+  "social": {
+    "instagram": "https://instagram.com/kythera.city",
+    "youtube": "https://youtube.com/@kythera.city",
+    "whatsapp_group": "https://chat.whatsapp.com/kythera",
+    "substack": "https://kythera.substack.com"
+  }
+}

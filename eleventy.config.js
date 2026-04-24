@@ -19,7 +19,7 @@ module.exports = function(eleventyConfig) {
 
   // Filter: Find offering by ID
   eleventyConfig.addFilter("findOffering", (offerings, id) => {
-    return offerings.filter(offering => offering.id === id);
+    return offerings.find(offering => offering.id === id);
   });
 
   return {

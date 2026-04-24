@@ -7,38 +7,51 @@
         {{ offering.description }}
       </p>
       <div class="grid sm:grid-cols-2 gap-4">
-        <div class="flex items-start">
-          <div class="w-8 h-8 bg-violet-primary/10 rounded-full flex items-center justify-center mr-3 mt-0.5">
-            <svg class="w-4 h-4 text-violet-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
+        {% if offering.what_to_expect %}
+          {% for item in offering.what_to_expect %}
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-violet-primary/10 rounded-full flex items-center justify-center mr-3 mt-0.5">
+                <svg class="w-4 h-4 text-violet-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-gray-700">{{ item }}</span>
+            </div>
+          {% endfor %}
+        {% else %}
+          <div class="flex items-start">
+            <div class="w-8 h-8 bg-violet-primary/10 rounded-full flex items-center justify-center mr-3 mt-0.5">
+              <svg class="w-4 h-4 text-violet-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <span class="text-gray-700">Guided music meditation</span>
           </div>
-          <span class="text-gray-700">Guided music meditation</span>
-        </div>
-        <div class="flex items-start">
-          <div class="w-8 h-8 bg-violet-primary/10 rounded-full flex items-center justify-center mr-3 mt-0.5">
-            <svg class="w-4 h-4 text-violet-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
+          <div class="flex items-start">
+            <div class="w-8 h-8 bg-violet-primary/10 rounded-full flex items-center justify-center mr-3 mt-0.5">
+              <svg class="w-4 h-4 text-violet-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <span class="text-gray-700">Collaborative sound-making</span>
           </div>
-          <span class="text-gray-700">Collaborative sound-making</span>
-        </div>
-        <div class="flex items-start">
-          <div class="w-8 h-8 bg-violet-primary/10 rounded-full flex items-center justify-center mr-3 mt-0.5">
-            <svg class="w-4 h-4 text-violet-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
+          <div class="flex items-start">
+            <div class="w-8 h-8 bg-violet-primary/10 rounded-full flex items-center justify-center mr-3 mt-0.5">
+              <svg class="w-4 h-4 text-violet-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <span class="text-gray-700">Community connection</span>
           </div>
-          <span class="text-gray-700">Community connection</span>
-        </div>
-        <div class="flex items-start">
-          <div class="w-8 h-8 bg-violet-primary/10 rounded-full flex items-center justify-center mr-3 mt-0.5">
-            <svg class="w-4 h-4 text-violet-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
+          <div class="flex items-start">
+            <div class="w-8 h-8 bg-violet-primary/10 rounded-full flex items-center justify-center mr-3 mt-0.5">
+              <svg class="w-4 h-4 text-violet-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <span class="text-gray-700">All instruments provided</span>
           </div>
-          <span class="text-gray-700">All instruments provided</span>
-        </div>
+        {% endif %}
       </div>
     </div>
   </div>

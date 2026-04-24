@@ -16,7 +16,18 @@
     "section_schedule": "on",
     "section_pricing": "on",
     "section_gallery": "off",
-    "section_faq": "on"
+    "section_faq": "on",
+    "what_to_expect": [
+      "Guided music meditation",
+      "Collaborative sound-making",
+      "Community connection",
+      "All instruments provided"
+    ],
+    "who_for": [
+      "Absolute beginners",
+      "Experienced musicians",
+      "The curious and open-minded"
+    ]
   },
   {
     "id": "bhakti",
@@ -35,7 +46,18 @@
     "section_schedule": "on",
     "section_pricing": "on",
     "section_gallery": "on",
-    "section_faq": "off"
+    "section_faq": "off",
+    "what_to_expect": [
+      "Devotional chanting and kirtan",
+      "Guided meditation with sound",
+      "Sacred instruments and mantras",
+      "Community sangha gathering"
+    ],
+    "who_for": [
+      "Spiritual seekers",
+      "Those interested in bhakti yoga",
+      "Anyone wanting deeper connection"
+    ]
   },
   {
     "id": "corporate",
@@ -54,7 +76,18 @@
     "section_schedule": "off",
     "section_pricing": "on",
     "section_gallery": "off",
-    "section_faq": "on"
+    "section_faq": "on",
+    "what_to_expect": [
+      "2-3 hour facilitated session",
+      "Team building through music",
+      "Stress relief activities",
+      "All equipment provided"
+    ],
+    "who_for": [
+      "Corporate teams",
+      "Leadership groups",
+      "Organizations seeking wellness"
+    ]
   },
   {
     "id": "innercircle",
@@ -73,7 +106,18 @@
     "section_schedule": "off",
     "section_pricing": "on",
     "section_gallery": "off",
-    "section_faq": "on"
+    "section_faq": "on",
+    "what_to_expect": [
+      "Unlimited jam access",
+      "Exclusive member events",
+      "Priority registration",
+      "Deeper community connection"
+    ],
+    "who_for": [
+      "Regular attendees",
+      "Committed practitioners",
+      "Community builders"
+    ]
   },
   {
     "id": "kids",
@@ -92,7 +136,18 @@
     "section_schedule": "on",
     "section_pricing": "on",
     "section_gallery": "on",
-    "section_faq": "on"
+    "section_faq": "on",
+    "what_to_expect": [
+      "Backyard Junk Jam fun",
+      "Creative music exploration",
+      "Age-appropriate activities",
+      "Safe, inclusive environment"
+    ],
+    "who_for": [
+      "Children ages 3-16",
+      "Birthday party groups",
+      "Families wanting creative play"
+    ]
   },
   {
     "id": "retreats",
